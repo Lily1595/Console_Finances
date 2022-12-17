@@ -6,7 +6,7 @@ In this challenge, you'll be using the concepts you've learned to complete the r
 
 ## Instructions
 
-1. Create a new GitHub repo called `Console-Finances`. Then, clone it to your computer.
+1. Create a new GitHub repo called `Console-Finances`. Then, clone it to your computer. 
 
 2. Copy the starter files in your local git repository.
    
