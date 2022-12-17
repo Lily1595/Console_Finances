@@ -93,7 +93,15 @@ let length = finances.length;
 
 console.log ("months:", length);
 
+//Question 2
 
+let sum = 0
+
+for (let i = 0; i < finances.length; i++) {
+    sum += finances[i][1]
+}
+
+console.log("total:", sum)
 
 
 
