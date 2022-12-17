@@ -123,6 +123,26 @@ console.log("total change in profit:", totalchangeinprofit);
 console.log(totalchangeinprofit/finances.length);
 
 
+//The greatest increase in profits (date and amount) over the entire period.
+
+let maxincrease = changeinprofit[0];
+    for (let i = 0; i < changeinprofit.length; i++) {
+        if (changeinprofit[i] >= maxincrease) {
+            maxincrease = changeinprofit[i];
+        }
+    }   
+    console.log(maxincrease);
+
+//The greatest decrease in profits (date and amount) over the entire period.
+
+
+let maxdecrease = changeinprofit[0];
+    for (let i = 0; i < changeinprofit.length; i++) {
+        if (changeinprofit[i] <= maxdecrease) {
+            maxdecrease = changeinprofit[i];
+        }
+    }   
+    console.log(maxdecrease);
 
 
 
