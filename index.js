@@ -135,7 +135,6 @@ let maxincrease = changeinprofit[0];
 
 //The greatest decrease in profits (date and amount) over the entire period.
 
-
 let maxdecrease = changeinprofit[0];
     for (let i = 0; i < changeinprofit.length; i++) {
         if (changeinprofit[i] <= maxdecrease) {
@@ -144,6 +143,15 @@ let maxdecrease = changeinprofit[0];
     }   
     console.log(maxdecrease);
 
+//tracking the date onto the array
+   
+let mixedarry = [];
+
+for ( var i = 0; i < changeinprofit.length; i++ ) {
+  mixedarry.push( [ changeinprofit[i], finances[i][0] ] );
+}
+
+console.log(mixedarry);
 
 
 
