@@ -103,6 +103,21 @@ for (let i = 0; i < finances.length; i++) {
 
 console.log("total:", sum)
 
+//Question 3
+//The average of the **changes** in Profit/Losses over the entire period.
+//You will need to track what the total change in profits are from month to month and then find the average.
+//(`Total/Number of months`)
+//You want a list of all the changes 
+
+  
+const changeinprofit = [];
+  for (let i = 1; i < finances.length; ++i) {
+    changeinprofit.push(finances[i][1] + finances[i][1] - 1);
+  }
+  
+  console.log(changeinprofit);
+
+
 
 
 
