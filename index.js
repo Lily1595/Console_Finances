@@ -111,8 +111,8 @@ console.log("total:", sum)
 
   
 const changeinprofit = [];
-  for (let i = 1; i < finances.length; ++i) {
-    changeinprofit.push(finances[i][1] + finances[i][1] - 1);
+  for (let i = 0; i < finances.length; ++i) {
+    changeinprofit.push(finances[i] - finances[i-1])
   }
   
   console.log(changeinprofit);
