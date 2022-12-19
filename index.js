@@ -105,33 +105,37 @@ console.log("total:", sum);
 
 //Question 3
  
-  
-let changeinprofit = [];
+
   for (let i = 1; i < finances.length; ++i) {
-    changeinprofit.push(finances[i][1] - finances[i-1][1])
+    finances[i].push(finances[i][1] - finances[i-1][1])
   }
   
-  console.log("change in profit:", changeinprofit);
+  console.log("change in profit:", finances);
+
 
 let totalchangeinprofit = 0; 
 
-for (let i = 0; i < changeinprofit.length; i++) {
- totalchangeinprofit += changeinprofit[i];
-}
+for (let i = 1; i < finances.length; i++) {
+     totalchangeinprofit += finances[i][2];
+    }
 
-console.log("total change in profit:", totalchangeinprofit);
-console.log(totalchangeinprofit/finances.length);
+console.log("total change in profit: $".concat(totalchangeinprofit));
+let average = totalchangeinprofit/finances.length;
+console.log("average profits/loss: $".concat(average));
+
 
 
 //The greatest increase in profits (date and amount) over the entire period.
 
-let maxincrease = changeinprofit[0];
-    for (let i = 0; i < changeinprofit.length; i++) {
-        if (changeinprofit[i] >= maxincrease) {
-            maxincrease = changeinprofit[i];
+let maxincrease = finances[0];
+    for (let i = 1; i < finances.length; i++) {
+        if (finances[i][2] >= maxincrease) {
+            maxincrease = finances[i][2];
         }
     }   
-    console.log(maxincrease);
+    console.log("max increase", maxincrease);
+
+    /*
 
 //The greatest decrease in profits (date and amount) over the entire period.
 
@@ -141,17 +145,24 @@ let maxdecrease = changeinprofit[0];
             maxdecrease = changeinprofit[i];
         }
     }   
-    console.log(maxdecrease);
+    console.log("max decrease", maxdecrease);
 
 //tracking the date onto the array
    
 let mixedarry = [];
 
 for ( var i = 0; i < changeinprofit.length; i++ ) {
-  mixedarry.push( [ changeinprofit[i], finances[i][0] ] );
+  mixedarry.push( [finances[i+1][0], changeinprofit[i]] );
 }
 
 console.log(mixedarry);
+
+*/
+  
+ 
+
+
+
 
 
 
