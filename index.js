@@ -87,11 +87,13 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
+console.log("financial analysis");
+
 //Question 1
 
 let length = finances.length;
 
-console.log("months:", length);
+console.log("months: ".concat(length));
 
 //Question 2
 
@@ -101,13 +103,13 @@ for (let i = 0; i < finances.length; i++) {
     sum += finances[i][1]
 }
 
-console.log("total:", sum);
+console.log("total: $".concat(sum));
 
 //Question 3
 
 
 for (let i = 1; i < finances.length; ++i) {
-    finances[i].push(finances[i][1] - finances[i - 1][1])
+    finances[i].push(finances[i][1] - finances[i - 1][1]);
 }
 
 //console.log("change in profit:", finances);
@@ -121,7 +123,7 @@ for (let i = 1; i < finances.length; i++) {
 
 //console.log("total change in profit: $".concat(totalchangeinprofit));
 let average = totalchangeinprofit / finances.length;
-console.log("average profits/loss: $".concat(average));
+console.log("average profits/loss: $".concat(average.toFixed(2)));
 
 
 
@@ -134,10 +136,10 @@ for (let i = 1; i < finances.length; i++) {
         // update the date
         maxincrease[0] = finances[i][0];
         // update the change value
-        maxincrease[1] = finances[i][2]
+        maxincrease[1] = finances[i][2];
     }
 }
-console.log("max increase $".concat(maxincrease));
+console.log("max increase: $".concat(maxincrease[1], " ", maxincrease[0]));
 
 
 let maxdecrease = ["date", 0];
@@ -147,10 +149,11 @@ for (let i = 1; i < finances.length; i++) {
         // update the date
         maxdecrease[0] = finances[i][0];
         // update the change value
-        maxdecrease[1] = finances[i][2]
+        maxdecrease[1] = finances[i][2];
     }
 }
-console.log("max decrease $".concat(maxdecrease));
+console.log("max decrease: $".concat(maxdecrease[1]," ", maxdecrease[0]));
+
 
 
 
