@@ -99,6 +99,7 @@ console.log("months: ".concat(length));
 
 let sum = 0
 
+// starting point, end point, count up? or down?
 for (let i = 0; i < finances.length; i++) {
     sum += finances[i][1]
 }
@@ -107,12 +108,11 @@ console.log("total: $".concat(sum));
 
 //Question 3
 
-
-for (let i = 1; i < finances.length; ++i) {
+for (let i = 1; i < finances.length; i++) {
     finances[i].push(finances[i][1] - finances[i - 1][1]);
 }
 
-//console.log("change in profit:", finances);
+// console.log("change in profit:", finances);
 
 
 let totalchangeinprofit = 0;
@@ -153,9 +153,6 @@ for (let i = 1; i < finances.length; i++) {
     }
 }
 console.log("max decrease: $".concat(maxdecrease[1]," ", maxdecrease[0]));
-
-
-
 
 
 
