@@ -125,7 +125,7 @@ for (let i = 1; i < finances.length; i++) {
 let average = totalchangeinprofit / finances.length;
 console.log("average profits/loss: $".concat(average.toFixed(2)));
 
-
+//Question 4+5
 
 //The greatest increase in profits (date and amount) over the entire period.
 
